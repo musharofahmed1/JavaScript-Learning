@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Comment Box</title>
+</head>
+<body>
+    <div id="comment-container">
+        <h1>New dawn in Bangladesh football with Hamzas homecoming in sightc</h1>
+        <p>Singapore are placed higher than Bangladesh in the FIFA rankings but in terms of market value, the men in red and green are ahead of the former largely because of one name - Hamza Choudhury – who has helped create a new buzz in the country’s football scene.
+
+        Hamzas current market value is 4.50m euros according to transfermarkt, while the entire Singapore team have a value of 3.08m euros.
+
+        Bangladesh are also currently the most valuable team in South Asia, only for Hamza.
+
+        The midfielder has not only increased the market value of the Bangladesh team, but awakened the countrys football too.
+
+        The public craze during the World Cup every four years indicates the passion this football-mad nation has for the beautiful game, but after the show ends it seems the country falls into hibernation.
+
+        Even during the matches of the two traditional top-flight giants Abahani and Mohammedan, the galleries are almost always empty.</p>
+    <br>
+    </div>
+<div>
+    <h4>Wants to Give Your Comment?</h4>
+<textarea id="new-comment" rows="5" cols="60" placeholder="Add Your Comment"></textarea>
+<br>
+<button id="btn-post">Post</button>
+
+</div>
+<!--JavaScript-->
+<script>
+    document.getElementById('btn-post').addEventListener('click', function(){
+        const commentBox = document.getElementById('new-comment')
+        const newComment = commentBox.value;
+
+        const commentContainer = document.getElementById('comment-container');
+        const p = document.createElement('p');
+        p.innerText = newComment;
+        commentContainer.appendChild(p)
+        commentBox.value = '';
+    })
+</script>
+
+</body>
+</html>
